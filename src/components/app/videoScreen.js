@@ -5,24 +5,24 @@ import { WebView } from 'react-native-webview';
 
 export default class VideoScreen extends React.Component {
 
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-          ip: '',
-        };
-    
-        this.EZRASSOR = new EZRASSOR(this.state.ip);
-    }
+  constructor(props) {
+    super(props);
 
-    render(){
-        return (
-            <WebView
-              style={styles.container}
-              source={{ uri: ip }}
-            />
-          );
-    }
+    this.state = {
+      ip: '',
+    };
+
+    this.EZRASSOR = new EZRASSOR(this.state.ip);
+  }
+
+  render() {
+    return (
+      <WebView
+        style={styles.container}
+        source={{ uri: ip }}
+      />
+    );
+  }
 }
 
 const styles = StyleSheet.create({
