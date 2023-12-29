@@ -8,7 +8,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import ControllerStyle from 'video-viewer/src/styles/controller';
+import ControllerStyle from '../../styles/controller';
 import * as Font from 'expo-font';
 import LottieView from 'lottie-react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -108,7 +108,7 @@ export default class IPConnectScreen extends React.Component {
     if (await isIpReachable(this.state.ip, timeoutTime)) {
       this.setIpInStorage();
       // TODO: Change where this navigates to 
-      this.props.navigation.navigate('Video Screen', { screen: 'roverConnected' });
+      this.props.navigation.navigate('Video Screen', { ip: this.state.ip });
     }
     else {
       console.log("IP address not reachable");
@@ -162,7 +162,7 @@ export default class IPConnectScreen extends React.Component {
                 autoPlay={false}
                 style={{ position: 'absolute', width: 300, height: 300, bottom: 5 }}
                 resizeMode="cover"
-                source={require('ezrassor-app/assets/loading.json')}
+                source={require('../../../assets/loading.json')}
               />
 
               {/* Text input for IP + port. */}

@@ -7,19 +7,13 @@ export default class VideoScreen extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      ip: '',
-    };
-
-    this.EZRASSOR = new EZRASSOR(this.state.ip);
   }
 
   render() {
     return (
       <WebView
         style={styles.container}
-        source={{ uri: ip }}
+        source={{ uri: this.props.route.params.ip }}
       />
     );
   }

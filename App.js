@@ -1,8 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from "react";
-//import VideoScreen from './src/components/app/VideoScreen';
+import VideoScreen from './src/components/app/VideoScreen';
 import IPConnectScreen from "./src/components/app/IPConnectScreen";
-import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 const Stack = createNativeStackNavigator();
